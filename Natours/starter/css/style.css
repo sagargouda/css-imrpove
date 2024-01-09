@@ -1,0 +1,95 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #777;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 30px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #7ed56fb9, #28b485ab),
+    url(/Natours/starter/img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo-box:hover {
+  transform: rotate(300deg);
+}
+
+.logo {
+  /*  specify height instead of width width will be configured by browser */
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  letter-spacing: 17px;
+  font-size: 60px;
+  font-weight: 400;
+  animation: moveToRight 3s;
+}
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  letter-spacing: 10px;
+  animation: moveToLeft 3s;
+}
+
+@keyframes moveToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
